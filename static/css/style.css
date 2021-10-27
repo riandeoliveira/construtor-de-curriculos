@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/* Imporatação de fontes de texto do Google Fontes. */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@900&display=swap');
+
+/* Seletor universal que aplica as configurações específicadas para todo documento HTML. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Declaração de variáveis em CSS com cores, para uso posterior. */
+:root {
+    --cor-cabecalho: #004AAD;
+    --cor-nome: #ffffff;
+    --cor-fundo: #ffffff;
+    --cor-titulo-1: #164E98;
+    --cor-paragrafos: #000000;
+    --cor-barras: #004AAD;
+    --cor-titulo-2: #004AAD;
+    --cor-titulo-3: #000000;
+}
+
+body {
+    background-color: #efefef;
+    display: flex;
+}
+
+/* Área responsável pelo estilo dos formulários. */
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+fieldset {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+}
+
+.fieldset-div {
+    margin-right: 20px;
+}
+
+input[type="date"],
+textarea {
+    font-family: Arial;
+}
+
+        /* Remove o ícone de calendário do input date para evitar conflito. */
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
+
+        /* Remove os ícones de seta dos input's number para evitar conflito. */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .input-estilo {
+            height: 30px;
+            padding: 5px;
+            margin: 5px 0px 10px 0px;
+            width: 200px;
+        }
+
+        .fieldset-block {
+            display: block;
+        }
+
+        textarea {
+            height: 80px;
+            margin: 5px 0px 10px 0px;
+            padding: 5px;
+            resize: none;
+            width: 420px;
+        }
+
+        .fieldset-width {
+            width: 443.98px;
+        }
+
+        .lista-formatada {
+            margin: 10px 20px 10px 0px;
+        }
+
+        .label-estilo {
+            display: block;
+            margin: 10px 0px 10px 0px;
+        }
+
+        .span-estilo {
+            display: block;
+            font-size: 16px;
+            margin: 5px 0px 5px 0px;
+        }
+
+        button {
+            cursor: pointer;
+            height: 30px;
+            padding: 5px;
+        }
+
+        input[type="color"] {
+            cursor: pointer;
+            margin: 5px 0px 10px 0px;
+        }
+
+        /* Área responsável pelo estilo do currículo. */
+
+        .documento,
+        .cv {
+            height: 895.31px;
+            margin-right: 10px;
+            padding: 5px;
+            width: 655px;
+        }
+
+        header {
+            background-color: var(--cor-cabecalho);
+            height: 95px;
+        }
+
+        .nome {
+            color: var(--cor-nome);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 2em;
+            padding: 25.8px;
+            text-align: center;
+        }
+
+        main {
+            background-color: var(--cor-fundo);
+            display: flex;
+            height: 800px;
+        }
+
+        .left-article {
+            padding: 15px 0px 15px 15px;
+            width: 327.5px;
+        }
+
+        .titulos {
+            color: var(--cor-titulo-1);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            letter-spacing: 0.13em;
+            width: 310px;
+        }
+
+        p,
+        span,
+        .lista-competencias {
+            color: var(--cor-paragrafos);
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            line-height: 1.25em;
+            margin: 15px 0px 15px;
+            width: 265px;
+        }
+
+        .right-article {
+            padding: 15px 15px 15px 0px;
+            width: 327.5px;
+        }
+
+        .barra {
+            background-color: var(--cor-barras);
+            height: 2px;
+            margin: 10px 0px 10px;
+            width: 320px;
+        }
+
+        .titulos-2 {
+            color: var(--cor-titulo-2);
+            font-family: 'PT Sans', sans-serif;
+            font-size: 18px;
+            margin: 10px 0px 10px;
+        }
+
+        .titulos-3 {
+            color: var(--cor-titulo-3);
+            font-family: 'Ruda', sans-serif;
+            font-size: 20px;
+            width: 310px;
+        }
