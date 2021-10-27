@@ -23,7 +23,7 @@ Programa simples que cria um currículo baseado nas informações pessoais inser
 
 ## Atualizado em
 
-
+27 de out. de 2021
 
 ## Desenvolvido em
 
