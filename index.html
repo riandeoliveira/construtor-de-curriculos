@@ -10,263 +10,17 @@
 </head>
 
 <body>
-    <!-- Área dos formulários. -->
-
-    <div class="formulario">
-
-        <!-- Recebe os dados pessoais. -->
-
-        <fieldset>
-            <legend>Dados Pessoais</legend>
-            <div class="fieldset-div">
-                <div>
-                    <label for="nome">Nome Completo:</label>
-                    <br>
-                    <input type="text" class="input-estilo" id="nome" onkeyup="adicionaNome()"
-                        placeholder="ex: Maria da Silva">
-                </div>
-                <div>
-                    <label for="data">Data de Nascimento:</label>
-                    <br>
-                    <input type="date" class="input-estilo" id="data" onkeyup="adicionaData()">
-                </div>
-                <div>
-                    <label for="idade">Idade:</label>
-                    <br>
-                    <input type="number" class="input-estilo" id="idade" onkeyup="adicionaIdade()" placeholder="ex: 20">
-                </div>
-                <div>
-                    <label for="nacionalidade">Nacionalidade:</label>
-                    <br>
-                    <input type="text" name="nacionalidade" id="nacionalidade" class="input-estilo"
-                        onkeyup="adicionaNacionalidade()" placeholder="ex: Brasileiro">
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label for="">Endereço:</label>
-                    <br>
-                    <input type="text" class="input-estilo" id="endereco" onkeyup="adicionaEndereco()"
-                        placeholder="ex: Rua Exemplo, 1234">
-                </div>
-                <div>
-                    <label for="">CEP:</label>
-                    <br>
-                    <input type="text" class="input-estilo" id="CEP" onkeyup="adicionaCEP()" maxlength="9"
-                        placeholder="ex: 12345-678">
-                </div>
-                <div>
-                    <label for="">Cidade:</label>
-                    <br>
-                    <input type="text" class="input-estilo" id="cidade" onkeyup="adicionaCidade()"
-                        placeholder="ex: Exemplo/EX">
-                </div>
-            </div>
-        </fieldset>
-
-        <!-- Recebe os contatos. -->
-
-        <fieldset>
-            <legend>Contatos</legend>
-            <div class="fieldset-div">
-                <div>
-                    <label for="email">E-mail:</label>
-                    <br>
-                    <input type="email" name="email" id="email" class="input-estilo" onkeyup="adicionaEmail()"
-                        placeholder="ex: emailexemplo@gmail.com">
-                </div>
-                <div>
-                    <label for="telefone">Telefone/Celular:</label>
-                    <br>
-                    <input type="tel" name="telefone" id="telefone" class="input-estilo" onkeyup="adicionaTelefone()"
-                        placeholder="ex: (11) 12345-6789">
-                </div>
-                <div>
-                    <label for="github">Perfil do GitHub:</label>
-                    <br>
-                    <input type="url" name="github" id="github" class="input-estilo" onkeyup="adicionaGitHub()"
-                        placeholder="ex: github.com/exemplo123">
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label for="certificados">Link para seus Certificados:</label>
-                    <br>
-                    <input type="url" name="certificados" id="certificados" class="input-estilo"
-                        onkeyup="adicionaCertificados()" placeholder="ex: exemplo.info/certificados">
-                </div>
-                <div>
-                    <label for="portfolio">Link para seu Portfólio:</label>
-                    <br>
-                    <input type="url" name="portfolio" id="portfolio" class="input-estilo" onkeyup="adicionaPortfolio()"
-                        placeholder="ex: exemplo.info/portfolio">
-                </div>
-                <div>
-                    <label for="linkedin">Perfil do LinkedIn:</label>
-                    <br>
-                    <input type="url" name="linkedin" id="linkedin" class="input-estilo" onkeyup="adicionaLinkedIn()"
-                        placeholder="ex: linkedin.com/exemplo123">
-                </div>
-            </div>
-        </fieldset>
-
-        <!-- Recebe as descrições pessoais. -->
-
-        <fieldset class="fieldset-block">
-            <legend>Descrições Pessoais</legend>
-            <div>
-                <label for="descricao">Descrição:</label>
-                <br>
-                <textarea name="descricao" id="descricao" onkeyup="adicionaDescricao()" placeholder="Fale um pouco sobre você.
-                
-RECOMENDA-SE colar um texto pronto ao invés de escrever diretamente aqui."></textarea>
-            </div>
-            <div>
-                <label for="objetivos">Objetivos profissionais:</label>
-                <br>
-                <textarea name="objetivos" id="objetivos" onkeyup="adicionaObjetivos()" placeholder="Fale um pouco sobre seus objetivos profissionais. 
-                    
-RECOMENDA-SE colar um texto pronto ao invés de escrever diretamente aqui."></textarea>
-            </div>
-        </fieldset>
-        <fieldset class="fieldset-width">
-
-            <!-- Recebe os idiomas. -->
-
-            <legend>Idiomas</legend>
-            <div id="areaIdiomas">
-                <div>
-                    <label for="idioma">Idioma e proficiência:</label>
-                    <br>
-                    <input type="text" name="idioma" id="idioma" class="input-estilo"
-                        placeholder="ex: Português Fluente">
-                    <button onclick="adicionaIdioma()">Adicionar idioma</button>
-                </div>
-                <label for="idiomasAdicionados" class="label-estilo">Idiomas adicionados no documento:</label>
-            </div>
-        </fieldset>
-
-        <!-- Recebe as competências. -->
-
-        <fieldset class="fieldset-width">
-            <legend>Competências</legend>
-            <div id="areaCompetencias">
-                <div>
-                    <label for="competencia">Digite uma competência:</label>
-                    <br>
-                    <input type="text" name="competencia" id="competencia" class="input-estilo"
-                        placeholder="ex: Determinado">
-                    <button onclick="adicionaCompetencia()">Adicionar competência</button>
-                </div>
-                <label for="competenciasAdicionadas" class="label-estilo">Competências adicionadas no documento:</label>
-            </div>
-        </fieldset>
-
-        <!-- Recebe as formações e habilidades. -->
-
-        <fieldset class="fieldset-width">
-            <legend>Formações e Habilidades</legend>
-            <div class="fieldset-div">
-                <div>
-                    <label for="nomeInstituicao">Nome da Instituição:</label>
-                    <br>
-                    <input type="text" class="input-estilo" id="instituicao">
-                </div>
-                <div class="status">
-                    <label for="status">Status:</label>
-                    <ul type="none" class="lista-formatada">
-                        <li>
-                            <input type="radio" name="status" class="opcao" onclick="verificaFormaHabil()" checked>
-                            <label for="concluido">Concluído</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="status" class="opcao" onclick="verificaFormaHabil()">
-                            <label for="emAndamento">Em andamento</label>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <label for="addInfo">Adicionar informações em:</label>
-                    <ul type="none" class="lista-formatada">
-                        <li>
-                            <input type="radio" name="addInfo" class="opcaoInfo" checked>
-                            <label for="formacaoAcademica">Formação Acadêmica</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="addInfo" class="opcaoInfo">
-                            <label for="habilidProfissionais">Habilid. Profissionais</label>
-                        </li>
-                    </ul>
-                    <label for="dadosAdicionais" class="label-estilo">Dados adicionais:</label>
-                    <div id="addForm">
-                        <div>
-                            <label for="anoDeConclusao">Ano de conclusão:</label>
-                            <input type="number" class="input-estilo" id="anoDeConclusao" placeholder="ex: 2020">
-                        </div>
-                        <div>
-                            <label for="linkDoSite">Link do Site:</label>
-                            <input type="url" class="input-estilo" id="linkDoSite" placeholder="ex: plataformaexemplo.com">
-                        </div>
-                        <div>
-                            <label for="cargaHoraria">Carga horária:</label>
-                            <input type="number" class="input-estilo" id="cargaHoraria" placeholder="ex: 40">
-                        </div>
-                        <button onclick="addInfo_1()">Adicionar informações</button>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <label for="curso">Curso:</label>
-                    <br>
-                    <input type="text" name="curso" id="curso" class="input-estilo">
-                </div>
-                <div class="modalidade">
-                    <label for="modalidade">Modalidade:</label>
-                    <ul type="none" class="lista-formatada">
-                        <li>
-                            <input type="radio" name="modalidade" class="opcao" onclick="verificaFormaHabil()" checked>
-                            <label for="online">Online</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="modalidade" class="opcao" onclick="verificaFormaHabil()">
-                            <label for="presencial">Presencial</label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </fieldset>
-        </fieldset>
-    </div>
-
-    <!-- Área do currículo. -->
-
     <div class="documento">
         <div class="cv">
-
-            <!-- Header. -->
-
             <header id="cabecalho">
                 <h1 class="nome" id="docNome">Seu Nome vai Aqui</h1>
             </header>
-
-            <!-- Main. -->
-
             <main id="fundo">
-
-                <!-- Parte esquerda do currículo. -->
-
                 <article class="left-article">
-
-                    <!-- Seção: SOBRE MIM. -->
-
                     <section>
                         <h2 class="titulos">SOBRE MIM</h2>
                         <p id="docDescricao"></p>
                     </section>
-
-                    <!-- Seção: DADOS PESSOAIS. -->
-
                     <section>
                         <h2 class="titulos">DADOS PESSOAIS</h2>
                         <p>
@@ -301,9 +55,6 @@ RECOMENDA-SE colar um texto pronto ao invés de escrever diretamente aqui."></te
                             </span>
                         </p>
                     </section>
-
-                    <!-- Seção: CONTATOS. -->
-
                     <section>
                         <h2 class="titulos">CONTATOS</h2>
                         <p>
@@ -338,43 +89,25 @@ RECOMENDA-SE colar um texto pronto ao invés de escrever diretamente aqui."></te
                             </span>
                         </p>
                     </section>
-
-                    <!-- Seção: OBJETIVOS. -->
-
                     <section>
                         <h2 class="titulos">OBJETIVOS</h2>
                         <p id="docObjetivos"></p>
                     </section>
-
-                    <!-- Seção: IDIOMAS. -->
-
                     <section>
                         <h2 class="titulos">IDIOMAS</h2>
                         <p id="docIdiomas"></p>
                     </section>
-
-                    <!-- Seção: COMPETÊNCIAS. -->
-
                     <section>
                         <h2 class="titulos">COMPETÊNCIAS</h2>
                         <ul type="none" class="lista-competencias" id="docCompetencias"></ul>
                     </section>
                 </article>
-
-                <!-- Parte direita do currículo. -->
-
                 <article class="right-article">
-
-                    <!-- Seção: FORMAÇÃO ACADÊMICA. -->
-                    
                     <section>
                         <h2 class="titulos">FORMAÇÃO ACADÊMICA</h2>
                         <div class="barra"></div>
                         <div id="docFormacaoAcademica">
                     </section>
-
-                    <!-- Seção: HABILIDADES PROFISSIONAIS. -->
-
                     <section>
                         <h2 class="titulos">HABILIDADES PROFISSIONAIS</h2>
                         <div class="barra"></div>
