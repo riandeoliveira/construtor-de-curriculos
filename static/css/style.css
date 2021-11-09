@@ -13,14 +13,14 @@
 }
 
 :root {
-    --cor-cabecalho: #004AAD;
-    --cor-nome: #ffffff;
-    --cor-fundo: #ffffff;
-    --cor-titulo-1: #164E98;
-    --cor-paragrafos: #000000;
-    --cor-barras: #004AAD;
-    --cor-titulo-2: #004AAD;
-    --cor-titulo-3: #000000;
+    --color-header: #004AAD;
+    --color-name: #ffffff;
+    --color-background: #ffffff;
+    --color-title-1: #164E98;
+    --color-paragraphs: #000000;
+    --color-bars: #004AAD;
+    --color-title-2: #004AAD;
+    --color-title-3: #000000;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
     display: flex;
 }
 
-.documento,
+.document,
 .cv {
     height: 895.31px;
     margin-right: 10px;
@@ -37,20 +37,26 @@ body {
 }
 
 header {
-    background-color: var(--cor-cabecalho);
+    background-color: var(--color-header);
     height: 95px;
 }
 
-.nome {
-    color: var(--cor-nome);
+.edit-header {
+    background-color: transparent;
+    border: 0;
+    color: var(--color-name);
     font-family: 'Open Sans', sans-serif;
-    font-size: 2em;
+    font-size: 1em;
+    height: 95px;
+    outline: 0;
     padding: 25.8px;
+    resize: none;
     text-align: center;
+    width: 645px;
 }
 
 main {
-    background-color: var(--cor-fundo);
+    background-color: var(--color-background);
     display: flex;
     height: 800px;
 }
@@ -60,46 +66,66 @@ main {
     width: 327.5px;
 }
 
-.titulos {
-    color: var(--cor-titulo-1);
+.titles {
+    color: var(--color-title-1);
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     letter-spacing: 0.13em;
     width: 310px;
 }
 
+ul {
+    margin: 15px 0px 15px;
+}
+
+li {
+    display: flex;
+}
+
 p,
+li,
 span,
-.lista-competencias {
+.skills-list {
     color: var(--cor-paragrafos);
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     line-height: 1.25em;
-    margin: 15px 0px 15px;
+    list-style-type: none;
+
     width: 265px;
-}   
+}
+
+.edit-list {
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 16px;
+    font-size: 13px;
+    margin-left: 5px;
+    resize: none;
+    outline: 0;
+}
 
 .right-article {
     padding: 15px 15px 15px 0px;
     width: 327.5px;
 }
 
-.barra {
-    background-color: var(--cor-barras);
+.bars {
+    background-color: var(--color-bars);
     height: 2px;
     margin: 10px 0px 10px;
     width: 320px;
 }
 
-.titulos-2 {
-    color: var(--cor-titulo-2);
+.titles-2 {
+    color: var(--color-title-2);
     font-family: 'PT Sans', sans-serif;
     font-size: 18px;
     margin: 10px 0px 10px;
 }
 
-.titulos-3 {
-    color: var(--cor-titulo-3);
+.titles-3 {
+    color: var(--color-title-3);
     font-family: 'Ruda', sans-serif;
     font-size: 20px;
     width: 310px;
