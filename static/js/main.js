@@ -1,6 +1,6 @@
 // const userInfo = {
 //     fullName: "",
-//     aboutUser: "",
+//     textarea: "",
 //     personalData: {
 //         birthDate: "",
 //         age: "",
@@ -32,16 +32,24 @@
 //     }
 // }
 
-// function formatBirthDate() {
-//     if (birthDate.value.length == 2 || birthDate.value.length == 5) {
-//         birthDate.value += "/";
-//     }
-// }
+// Permite a quebra de linha em alguns elementos textarea.
+function formatTextarea(textarea) {
+    if (textarea.scrollHeight > textarea.offsetHeight) {
+        textarea.rows += 1;
+    }
+}
 
-const formatBirthDate = () => birthDate.value.length === 2 || birthDate.value.length === 5 ? birthDate.value += "/" : "";
+const elements = document.getElementsByClassName("edit-lists");
 
-const formatAge = () => age.value.length === 2 ? age.value += " anos" : "";
+// Impede a quebra de linha em alguns elementos textarea.
+for (let i = 0; i <= elements.length; i++) {
+    elements[i].addEventListener("keypress", keyEvent => {
+        if (keyEvent.which === 13) {
+            keyEvent.preventDefault();
+        }
+    });
+}
 
-const formatCEP = () => cep.value.length === 5 ? cep.value += "-" : "";
-
-const formatPhoneNumber = () => phoneNumber.value.length === 1 ? phoneNumber.value += "()" : "";
+function createSkillsArea() {
+    
+}
