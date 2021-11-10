@@ -17,11 +17,16 @@
     --color-white: #fff;
     --color-blue-secondary: #164e98;
     --color-black: #000;
+
+    --font-open-sans: 'Open Sans';
+    --font-montserrat: 'Montserrat';
+    --font-roboto: 'Roboto';
+    --font-pt-sans: 'PT Sans';
+    --font-ruda: 'Ruda';
 }
 
 body {
     background-color: #efefef;
-    display: flex;
 }
 
 .curriculum {
@@ -36,15 +41,18 @@ header {
     height: 95px;
 }
 
-.edit-header {
+textarea {
     background-color: transparent;
     border: 0;
-    color: var(--color-white);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    outline: 0;
-    padding: 25.8px;
     resize: none;
+    outline: 0;
+}
+
+.edit-header {
+    color: var(--color-white);
+    font-family: var(--font-open-sans), sans-serif;
+    font-size: 1em;
+    padding: 25.8px;
     text-align: center;
     width: 645px;
 }
@@ -62,25 +70,22 @@ main {
 
 .titles {
     color: var(--color-blue-secondary);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
     font-size: 1em;
     letter-spacing: 0.13em;
     width: 310px;
 }
 
 .edit-paragraphs {
-    border: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-roboto), sans-serif;
     margin: 10px 0;
-    resize: none;
-    outline: 0;
     width: 100%;
 }
 
 p,
 li {
     color: var(--color-black);
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-roboto), sans-serif;
     font-size: 13px;
     line-height: 1.25em;
     list-style-type: none;
@@ -96,21 +101,15 @@ li {
 }
 
 .edit-lists {
-    border: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-roboto), sans-serif;
     font-size: 13px;
     height: 16px;
     margin-left: 5px;
-    resize: none;
-    outline: 0;
 }
 
 .edit-skills-lists {
-    border: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-roboto), sans-serif;
     margin: 10px 0;
-    outline: 0;
-    resize: none;
     width: 100%;
 }
 
@@ -126,16 +125,21 @@ li {
     width: 320px;
 }
 
+.add-icon {
+    cursor: pointer;
+    text-align: center;
+}
+
 .titles-2 {
     color: var(--color-blue-primary);
-    font-family: 'PT Sans', sans-serif;
+    font-family: var(--font-pt-sans), sans-serif;
     font-size: 18px;
     margin: 10px 0px 10px;
 }
 
 .titles-3 {
     color: var(--color-black);
-    font-family: 'Ruda', sans-serif;
+    font-family: var(--font-ruda), sans-serif;
     font-size: 20px;
     width: 310px;
 }
