@@ -29,14 +29,44 @@ body {
     background-color: #efefef;
 }
 
+.header-page {
+    background-color: red;
+    padding: 15px;
+    text-align: center;
+}
+
+.sub-title-page {
+    padding: 10px;
+}
+
+fieldset {
+    font-family: var(--font-roboto);
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+}
+
+.fieldset-content {
+    display: flex;
+    padding: 10px;
+}
+
+.fieldset-content ul {
+    margin-right: 20px;
+}
+
+input[type="radio"], label {
+    cursor: pointer;
+}
+
 .curriculum {
     height: 895.31px;
-    margin-right: 10px;
+    margin: auto;
     padding: 5px;
     width: 655px;
 }
 
-header {
+.header-cv {
     background-color: var(--color-blue-primary);
     height: 95px;
 }
@@ -57,7 +87,7 @@ textarea {
     width: 645px;
 }
 
-main {
+.main-cv {
     background-color: var(--color-white);
     display: flex;
     height: 800px;
@@ -79,10 +109,10 @@ main {
 .edit-paragraphs {
     font-family: var(--font-roboto), sans-serif;
     margin: 10px 0;
-    width: 100%;
+    width: 90%;
 }
 
-p,
+span,
 li {
     color: var(--color-black);
     font-family: var(--font-roboto), sans-serif;
@@ -125,9 +155,13 @@ li {
     width: 320px;
 }
 
-.add-icon {
+.area-icon {
     cursor: pointer;
     text-align: center;
+}
+
+.add-icons {
+    fill: var(--color-blue-primary);
 }
 
 .titles-2 {
