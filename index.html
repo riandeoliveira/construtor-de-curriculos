@@ -33,13 +33,15 @@
                     <ul>
                         <li>
                             <b>Data de Nascimento:</b>
-                            <textarea class="edit-lists" maxlength="10" placeholder="dd/mm/aaaa" spellcheck="false"
-                                title="Clique para digitar sua data de nascimento" style="width: 130px;"></textarea>
+                            <textarea class="edit-lists" id="birthDate" maxlength="10" placeholder="dd/mm/aaaa"
+                                spellcheck="false" title="Clique para digitar sua data de nascimento"
+                                style="width: 130px;" onkeyup="formatBirthDate()"></textarea>
                         </li>
                         <li>
                             <b>Idade:</b>
-                            <textarea class="edit-lists" maxlength="7" placeholder="xx anos" spellcheck="false"
-                                title="Clique para digitar sua idade" style="width: 265px;"></textarea>
+                            <textarea class="edit-lists" id="age" maxlength="7" placeholder="xx anos" spellcheck="false"
+                                title="Clique para digitar sua idade" style="width: 265px;"
+                                onkeyup="formatAge()"></textarea>
                         </li>
                         <li>
                             <b>Nacionalidade:</b>
@@ -54,12 +56,13 @@
                         </li>
                         <li>
                             <b>CEP:</b>
-                            <textarea class="edit-lists" maxlength="9" placeholder="12345-678" spellcheck="false"
-                                title="Clique para digitar seu CEP" style="width: 373px;"></textarea>
+                            <textarea class="edit-lists" id="cep" maxlength="9" placeholder="12345-678"
+                                spellcheck="false" title="Clique para digitar seu CEP" style="width: 373px;"
+                                onkeyup="formatCEP()"></textarea>
                         </li>
                         <li>
                             <b>Cidade:</b>
-                            <textarea class="edit-lists" maxlength="30" placeholder="Exemplo, XX" spellcheck="false"
+                            <textarea class="edit-lists" maxlength="30" placeholder="Exemplo, EX" spellcheck="false"
                                 title="Clique para digitar sua cidade" style="width: 257px;"></textarea>
                         </li>
                     </ul>
@@ -75,8 +78,9 @@
                         </li>
                         <li>
                             <b>Telefone:</b>
-                            <textarea class="edit-lists" maxlength="15" placeholder="(00) 12345-6789" spellcheck="false"
-                                title="Clique para digitar seu número de telefone" style="width: 247px;"></textarea>
+                            <textarea class="edit-lists" id="phoneNumber" maxlength="15" placeholder="(00) 12345-6789"
+                                spellcheck="false" title="Clique para digitar seu número de telefone"
+                                style="width: 247px;" onkeyup="formatPhoneNumber()"></textarea>
                         </li>
                         <li>
                             <b>GitHub:</b>
@@ -133,12 +137,10 @@
                 <section>
                     <h2 class="titles">FORMAÇÃO ACADÊMICA</h2>
                     <div class="bars"></div>
-                    <div id="docFormacaoAcademica">
                 </section>
                 <section>
                     <h2 class="titles">HABILIDADES PROFISSIONAIS</h2>
                     <div class="bars"></div>
-                    <div id="docHabilidadesProfissionais">
                 </section>
             </article>
         </main>
