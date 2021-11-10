@@ -10,124 +10,138 @@
 </head>
 
 <body>
-    <div class="document">
-        <div class="cv">
-            <header>
-                <h1>
-                    <textarea class="edit-header" spellcheck="false"
-                        title="Clique para digitar seu nome">Seu Nome</textarea>
-                </h1>
-            </header>
-            <main>
-                <article class="left-article">
-                    <section>
-                        <h2 class="titles">SOBRE MIM</h2>
-                        <p></p>
-                    </section>
-                    <section>
-                        <h2 class="titles">DADOS PESSOAIS</h2>
-                        <ul>
-                            <li>
-                                <b>Data de Nascimento:</b>
-                                <textarea class="edit-list" maxlength="10" placeholder="dd/mm/aaaa" spellcheck="false"
-                                    title="Clique para digitar sua data de nascimento" style="width: 130px;"></textarea>
-                            </li>
-                            <li>
-                                <b>Idade:</b>
-                                <textarea class="edit-list" maxlength="7" placeholder="xx anos" spellcheck="false"
-                                    title="Clique para digitar sua idade" style="width: 265px;"></textarea>
-                            </li>
-                            <li>
-                                <b>Nacionalidade:</b>
-                                <textarea class="edit-list" maxlength="20" placeholder="Exemplo" spellcheck="false"
-                                    title="Clique para digitar sua nacionalidade" style="width: 214px;"></textarea>
-                            </li>
-                            <li>
-                                <b>Endereço:</b>
-                                <textarea autocomplete="off" class="edit-list" maxlength="28"
-                                    placeholder="Rua Exemplo, 123" spellcheck="false"
-                                    title="Clique para digitar seu endereço" style="width: 243px;"></textarea>
-                            </li>
-                            <li>
-                                <b>CEP:</b>
-                                <textarea class="edit-list" maxlength="9" placeholder="12345-678" spellcheck="false"
-                                    title="Clique para digitar seu CEP" style="width: 373px;"></textarea>
-                            </li>
-                            <li>
-                                <b>Cidade:</b>
-                                <textarea class="edit-list" maxlength="30" placeholder="Exemplo, XX" spellcheck="false"
-                                    title="Clique para digitar sua cidade" style="width: 257px;"></textarea>
-                            </li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2 class="titles">CONTATOS</h2>
-                        <ul>
-                            <li>
-                                <b>Email:</b>
-                                <textarea class="edit-list" maxlength="32" placeholder="exemplo2000@email.com"
-                                    spellcheck="false" title="Clique para digitar seu email"
-                                    style="width: 265px;"></textarea>
-                            </li>
-                            <li>
-                                <b>Telefone:</b>
-                                <textarea class="edit-list" maxlength="15" placeholder="(00) 12345-6789"
-                                    spellcheck="false" title="Clique para digitar seu número de telefone"
-                                    style="width: 247px;"></textarea>
-                            </li>
-                            <li>
-                                <b>GitHub:</b>
-                                <textarea class="edit-list" maxlength="28" placeholder="github.com/usuario"
-                                    spellcheck="false" title="Clique para digitar o link da sua conta do GitHub"
-                                    style="width: 257px;"></textarea>
-                            </li>
-                            <li>
-                                <b>Certificados:</b>
-                                <textarea class="edit-list" maxlength="24" spellcheck="false"
-                                    title="Clique para digitar o link dos seus certificados"
-                                    style="width: 227px"></textarea>
-                            </li>
-                            <li>
-                                <b>Portfólio:</b>
-                                <textarea class="edit-list" maxlength="26" spellcheck="false"
-                                    title="Clique para digitar o link do seu portfólio"
-                                    style="width: 247px;"></textarea>
-                            </li>
-                            <li>
-                                <b>LinkedIn:</b>
-                                <textarea class="edit-list" maxlength="27" placeholder="linkedin.com/in/usuario/"
-                                    spellcheck="false" title="Clique para digitar o link do seu LinkedIn"
-                                    style="width: 249px;"></textarea>
-                            </li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2 class="titles">OBJETIVOS</h2>
-                        <p id="docObjetivos"></p>
-                    </section>
-                    <section>
-                        <h2 class="titles">IDIOMAS</h2>
-                        <p id="docIdiomas"></p>
-                    </section>
-                    <section>
-                        <h2 class="titles">COMPETÊNCIAS</h2>
-                        <ul type="none" class="skills-list" id="docCompetencias"></ul>
-                    </section>
-                </article>
-                <article class="right-article">
-                    <section>
-                        <h2 class="titles">FORMAÇÃO ACADÊMICA</h2>
-                        <div class="bars"></div>
-                        <div id="docFormacaoAcademica">
-                    </section>
-                    <section>
-                        <h2 class="titles">HABILIDADES PROFISSIONAIS</h2>
-                        <div class="bars"></div>
-                        <div id="docHabilidadesProfissionais">
-                    </section>
-                </article>
-            </main>
-        </div>
+    <div class="curriculum">
+        <header>
+            <h1>
+                <textarea class="edit-header" maxlength="29" spellcheck="false"
+                    title="Clique para digitar seu nome">Seu Nome</textarea>
+            </h1>
+        </header>
+        <main>
+            <article class="left-article">
+                <section>
+                    <h2 class="titles">SOBRE MIM</h2>
+                    <p>
+                        <textarea class="edit-paragraphs"
+                            placeholder="Fale um pouco sobre você: quem é, o quê faz, do que gosta etc..."
+                            spellcheck="false" title="Clique aqui para falar sobre você"
+                            oninput="if (this.scrollHeight > this.offsetHeight) this.rows += 1"></textarea>
+                    </p>
+                </section>
+                <section>
+                    <h2 class="titles">DADOS PESSOAIS</h2>
+                    <ul>
+                        <li>
+                            <b>Data de Nascimento:</b>
+                            <textarea class="edit-lists" maxlength="10" placeholder="dd/mm/aaaa" spellcheck="false"
+                                title="Clique para digitar sua data de nascimento" style="width: 130px;"></textarea>
+                        </li>
+                        <li>
+                            <b>Idade:</b>
+                            <textarea class="edit-lists" maxlength="7" placeholder="xx anos" spellcheck="false"
+                                title="Clique para digitar sua idade" style="width: 265px;"></textarea>
+                        </li>
+                        <li>
+                            <b>Nacionalidade:</b>
+                            <textarea class="edit-lists" maxlength="20" placeholder="Exemplo" spellcheck="false"
+                                title="Clique para digitar sua nacionalidade" style="width: 214px;"></textarea>
+                        </li>
+                        <li>
+                            <b>Endereço:</b>
+                            <textarea class="edit-lists" maxlength="28" placeholder="Rua Exemplo, 123"
+                                spellcheck="false" title="Clique para digitar seu endereço"
+                                style="width: 243px;"></textarea>
+                        </li>
+                        <li>
+                            <b>CEP:</b>
+                            <textarea class="edit-lists" maxlength="9" placeholder="12345-678" spellcheck="false"
+                                title="Clique para digitar seu CEP" style="width: 373px;"></textarea>
+                        </li>
+                        <li>
+                            <b>Cidade:</b>
+                            <textarea class="edit-lists" maxlength="30" placeholder="Exemplo, XX" spellcheck="false"
+                                title="Clique para digitar sua cidade" style="width: 257px;"></textarea>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="titles">CONTATOS</h2>
+                    <ul>
+                        <li>
+                            <b>Email:</b>
+                            <textarea class="edit-lists" maxlength="32" placeholder="exemplo2000@email.com"
+                                spellcheck="false" title="Clique para digitar seu email"
+                                style="width: 265px;"></textarea>
+                        </li>
+                        <li>
+                            <b>Telefone:</b>
+                            <textarea class="edit-lists" maxlength="15" placeholder="(00) 12345-6789" spellcheck="false"
+                                title="Clique para digitar seu número de telefone" style="width: 247px;"></textarea>
+                        </li>
+                        <li>
+                            <b>GitHub:</b>
+                            <textarea class="edit-lists" maxlength="28" placeholder="github.com/usuario"
+                                spellcheck="false" title="Clique para digitar o link da sua conta do GitHub"
+                                style="width: 257px;"></textarea>
+                        </li>
+                        <li>
+                            <b>Certificados:</b>
+                            <textarea class="edit-lists" maxlength="24" spellcheck="false"
+                                title="Clique para digitar o link dos seus certificados"
+                                style="width: 227px"></textarea>
+                        </li>
+                        <li>
+                            <b>Portfólio:</b>
+                            <textarea class="edit-lists" maxlength="26" spellcheck="false"
+                                title="Clique para digitar o link do seu portfólio" style="width: 247px;"></textarea>
+                        </li>
+                        <li>
+                            <b>LinkedIn:</b>
+                            <textarea class="edit-lists" maxlength="27" placeholder="linkedin.com/in/usuario/"
+                                spellcheck="false" title="Clique para digitar o link do seu LinkedIn"
+                                style="width: 249px;"></textarea>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="titles">OBJETIVOS</h2>
+                    <p>
+                        <textarea class="edit-paragraphs"
+                            placeholder="Fale um pouco sobre os seus objetivos profissionais" spellcheck="false"
+                            title="Clique aqui para falar sobre os seus objetivos"
+                            oninput="if (this.scrollHeight > this.offsetHeight) this.rows += 1"></textarea>
+                    </p>
+                </section>
+                <section>
+                    <h2 class="titles">IDIOMAS</h2>
+                    <p>
+                        <textarea class="edit-skills-lists" placeholder="Ex: Inglês Intermediário" spellcheck="false"
+                            title="Clique aqui para adicionar seus idiomas"
+                            oninput="if (this.scrollHeight > this.offsetHeight) this.rows += 1"></textarea>
+                    </p>
+                </section>
+                <section>
+                    <h2 class="titles">COMPETÊNCIAS</h2>
+                    <p>
+                        <textarea class="edit-skills-lists" placeholder="Ex: Determinado" spellcheck="false"
+                            title="Clique aqui para adicionar suas competências"
+                            oninput="if (this.scrollHeight > this.offsetHeight) this.rows += 1"></textarea>
+                    </p>
+                </section>
+            </article>
+            <article class="right-article">
+                <section>
+                    <h2 class="titles">FORMAÇÃO ACADÊMICA</h2>
+                    <div class="bars"></div>
+                    <div id="docFormacaoAcademica">
+                </section>
+                <section>
+                    <h2 class="titles">HABILIDADES PROFISSIONAIS</h2>
+                    <div class="bars"></div>
+                    <div id="docHabilidadesProfissionais">
+                </section>
+            </article>
+        </main>
     </div>
     <script src="static/js/main.js"></script>
 </body>
