@@ -25,7 +25,7 @@
                         <textarea class="edit-paragraphs"
                             placeholder="Fale um pouco sobre você: quem é, o quê faz, do que gosta etc..."
                             spellcheck="false" title="Clique aqui para falar sobre você"
-                            oninput="if (this.scrollHeight > this.offsetHeight) this.rows += 1"></textarea>
+                            oninput="formatTextarea(this)"></textarea>
                     </p>
                 </section>
                 <section>
@@ -33,15 +33,13 @@
                     <ul>
                         <li>
                             <b>Data de Nascimento:</b>
-                            <textarea class="edit-lists" id="birthDate" maxlength="10" placeholder="dd/mm/aaaa"
-                                spellcheck="false" title="Clique para digitar sua data de nascimento"
-                                style="width: 130px;" onkeyup="formatBirthDate()"></textarea>
+                            <textarea class="edit-lists" maxlength="10" placeholder="dd/mm/aaaa" spellcheck="false"
+                                title="Clique para digitar sua data de nascimento" style="width: 130px;"></textarea>
                         </li>
                         <li>
                             <b>Idade:</b>
-                            <textarea class="edit-lists" id="age" maxlength="7" placeholder="xx anos" spellcheck="false"
-                                title="Clique para digitar sua idade" style="width: 265px;"
-                                onkeyup="formatAge()"></textarea>
+                            <textarea class="edit-lists" maxlength="7" placeholder="xx anos" spellcheck="false"
+                                title="Clique para digitar sua idade" style="width: 265px;"></textarea>
                         </li>
                         <li>
                             <b>Nacionalidade:</b>
@@ -56,9 +54,8 @@
                         </li>
                         <li>
                             <b>CEP:</b>
-                            <textarea class="edit-lists" id="cep" maxlength="9" placeholder="12345-678"
-                                spellcheck="false" title="Clique para digitar seu CEP" style="width: 373px;"
-                                onkeyup="formatCEP()"></textarea>
+                            <textarea class="edit-lists" maxlength="9" placeholder="12345-678" spellcheck="false"
+                                title="Clique para digitar seu CEP" style="width: 373px;"></textarea>
                         </li>
                         <li>
                             <b>Cidade:</b>
@@ -78,9 +75,8 @@
                         </li>
                         <li>
                             <b>Telefone:</b>
-                            <textarea class="edit-lists" id="phoneNumber" maxlength="15" placeholder="(00) 12345-6789"
-                                spellcheck="false" title="Clique para digitar seu número de telefone"
-                                style="width: 247px;" onkeyup="formatPhoneNumber()"></textarea>
+                            <textarea class="edit-lists" maxlength="15" placeholder="(00) 12345-6789" spellcheck="false"
+                                title="Clique para digitar seu número de telefone" style="width: 247px;"></textarea>
                         </li>
                         <li>
                             <b>GitHub:</b>
@@ -113,15 +109,14 @@
                         <textarea class="edit-paragraphs"
                             placeholder="Fale um pouco sobre os seus objetivos profissionais" spellcheck="false"
                             title="Clique aqui para falar sobre os seus objetivos"
-                            oninput="if (this.scrollHeight > this.offsetHeight) this.rows += 1"></textarea>
+                            oninput="formatTextarea(this)"></textarea>
                     </p>
                 </section>
                 <section>
                     <h2 class="titles">IDIOMAS</h2>
                     <p>
                         <textarea class="edit-skills-lists" placeholder="Ex: Inglês Intermediário" spellcheck="false"
-                            title="Clique aqui para adicionar seus idiomas"
-                            oninput="if (this.scrollHeight > this.offsetHeight) this.rows += 1"></textarea>
+                            title="Clique aqui para adicionar seus idiomas" oninput="formatTextarea(this)"></textarea>
                     </p>
                 </section>
                 <section>
@@ -129,7 +124,7 @@
                     <p>
                         <textarea class="edit-skills-lists" placeholder="Ex: Determinado" spellcheck="false"
                             title="Clique aqui para adicionar suas competências"
-                            oninput="if (this.scrollHeight > this.offsetHeight) this.rows += 1"></textarea>
+                            oninput="formatTextarea(this)"></textarea>
                     </p>
                 </section>
             </article>
@@ -137,10 +132,16 @@
                 <section>
                     <h2 class="titles">FORMAÇÃO ACADÊMICA</h2>
                     <div class="bars"></div>
+                    <div class="add-icon">
+                        <img src="icons/add_circle.svg" alt="Ícone para adicionar conteúdo">
+                    </div>
                 </section>
                 <section>
                     <h2 class="titles">HABILIDADES PROFISSIONAIS</h2>
                     <div class="bars"></div>
+                    <div class="add-icon">
+                        <img src="icons/add_circle.svg" alt="Ícone para adicionar conteúdo">
+                    </div>
                 </section>
             </article>
         </main>
