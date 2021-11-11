@@ -14,7 +14,7 @@
 
 :root {
     --color-primary: #004aad;
-    --color-background: #fff;
+    --color-quaternary: #fff;
     --color-secondary: #164e98;
     --color-tertiary: #000;
 
@@ -53,7 +53,8 @@ main {
 }
 
 fieldset {
-    background-color: var(--color-background);
+    background-color: #fff;
+    border: 1px solid #000;
     border-radius: 5px;
     font-family: var(--font-roboto);
     height: 100%;
@@ -76,10 +77,25 @@ input[type="radio"], label {
     cursor: pointer;
 }
 
-button {
+.add-course {
     cursor: pointer;
     padding: 5px;
     width: 500px;
+}
+
+input[type="color"] {
+    cursor: pointer;
+    width: 25px;
+}
+
+.container-save-cv {
+    text-align: center;
+}
+
+.save-cv {
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px 100px;
 }
 
 .curriculum {
@@ -102,7 +118,7 @@ textarea {
 }
 
 .edit-header {
-    color: var(--color-background);
+    color: var(--color-quaternary);
     font-family: var(--font-open-sans), sans-serif;
     font-size: 1em;
     padding: 25.8px;
@@ -111,7 +127,7 @@ textarea {
 }
 
 .main-cv {
-    background-color: var(--color-background);
+    background-color: var(--color-quaternary);
     display: flex;
     height: 800px;
 }
@@ -199,4 +215,27 @@ li {
 
 #academicEducationArea ul, #professionalSkillsArea ul {
     margin-bottom: 15px;
+}
+
+
+
+
+@media print {
+    main {
+        display: block;
+    }
+
+    .header-page,
+    fieldset {
+        display: none;
+    }
+
+    .curriculum {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-cv {
+        height: 830px;
+    }
 }
