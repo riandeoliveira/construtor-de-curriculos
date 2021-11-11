@@ -13,10 +13,10 @@
 }
 
 :root {
-    --color-blue-primary: #004aad;
-    --color-white: #fff;
-    --color-blue-secondary: #164e98;
-    --color-black: #000;
+    --color-primary: #004aad;
+    --color-background: #fff;
+    --color-secondary: #164e98;
+    --color-tertiary: #000;
 
     --font-open-sans: 'Open Sans';
     --font-montserrat: 'Montserrat';
@@ -35,19 +35,36 @@ body {
     text-align: center;
 }
 
+.header-page > h1 {
+    font-family: var(--font-pt-sans);
+}
+
+.header-page > p {
+    font-family: var(--font-roboto);
+}
+
 .sub-title-page {
     padding: 10px;
 }
 
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
 fieldset {
+    background-color: var(--color-background);
+    border-radius: 5px;
     font-family: var(--font-roboto);
+    height: 100%;
     margin: 10px;
     padding: 10px;
-    width: 500px;
+    width: 400px;
 }
 
 .fieldset-content {
     display: flex;
+    flex-wrap: wrap;
     padding: 10px;
 }
 
@@ -59,15 +76,21 @@ input[type="radio"], label {
     cursor: pointer;
 }
 
+button {
+    cursor: pointer;
+    padding: 5px;
+    width: 500px;
+}
+
 .curriculum {
     height: 895.31px;
-    margin: auto;
+    margin: 15px;
     padding: 5px;
     width: 655px;
 }
 
 .header-cv {
-    background-color: var(--color-blue-primary);
+    background-color: var(--color-primary);
     height: 95px;
 }
 
@@ -79,7 +102,7 @@ textarea {
 }
 
 .edit-header {
-    color: var(--color-white);
+    color: var(--color-background);
     font-family: var(--font-open-sans), sans-serif;
     font-size: 1em;
     padding: 25.8px;
@@ -88,7 +111,7 @@ textarea {
 }
 
 .main-cv {
-    background-color: var(--color-white);
+    background-color: var(--color-background);
     display: flex;
     height: 800px;
 }
@@ -99,7 +122,7 @@ textarea {
 }
 
 .titles {
-    color: var(--color-blue-secondary);
+    color: var(--color-secondary);
     font-family: var(--font-montserrat), sans-serif;
     font-size: 1em;
     letter-spacing: 0.13em;
@@ -114,7 +137,7 @@ textarea {
 
 span,
 li {
-    color: var(--color-black);
+    color: var(--color-tertiary);
     font-family: var(--font-roboto), sans-serif;
     font-size: 13px;
     line-height: 1.25em;
@@ -149,30 +172,21 @@ li {
 }
 
 .bars {
-    background-color: var(--color-blue-primary);
+    background-color: var(--color-primary);
     height: 2px;
     margin: 10px 0px 10px;
     width: 320px;
 }
 
-.area-icon {
-    cursor: pointer;
-    text-align: center;
-}
-
-.add-icons {
-    fill: var(--color-blue-primary);
-}
-
 .titles-2 {
-    color: var(--color-blue-primary);
+    color: var(--color-primary);
     font-family: var(--font-pt-sans), sans-serif;
     font-size: 18px;
     margin: 10px 0px 10px;
 }
 
 .titles-3 {
-    color: var(--color-black);
+    color: var(--color-tertiary);
     font-family: var(--font-ruda), sans-serif;
     font-size: 20px;
     width: 310px;
