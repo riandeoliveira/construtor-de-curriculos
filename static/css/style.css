@@ -163,7 +163,7 @@ li {
 .edit-skills-lists {
     font-family: var(--font-roboto), sans-serif;
     margin: 10px 0;
-    width: 100%;
+    width: 90%;
 }
 
 .right-article {
@@ -195,4 +195,8 @@ li {
     font-size: 20px;
     margin: 5px 0 0 0;
     width: 310px;
+}
+
+#academicEducationArea ul, #professionalSkillsArea ul {
+    margin-bottom: 15px;
 }
