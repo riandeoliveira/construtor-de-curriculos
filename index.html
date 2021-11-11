@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construtor de Currículos</title>
+    <title>CV Editor</title>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
     <header class="header-page">
-        <h1>Construtor de Currículos</h1>
-        <p class="sub-title-page">Rápido</p>
+        <h1>CV Editor</h1>
+        <p class="sub-title-page">Rápido, simples e fácil</p>
     </header>
     <main>
         <fieldset>
-            <legend>Informações sobre os cursos</legend>
+            <legend><b>Informações sobre os cursos</b></legend>
             <p>Selecione as opções correspondentes antes de adicionar cada curso.</p>
             <div class="fieldset-content">
                 <div>
                     <p>Status:</p>
                     <ul>
-                        <input type="radio" name="stats" id="concluded">
+                        <input type="radio" name="stats" id="concluded" checked>
                         <label for="concluded">Concluído</label>
                         <br>
                         <input type="radio" name="stats" id="inProgress">
@@ -32,43 +32,26 @@
                 <div>
                     <p>Modalidade:</p>
                     <ul>
-                        <input type="radio" name="modality" id="online">
+                        <input type="radio" name="modality" id="online" checked>
                         <label for="online">Online</label>
                         <br>
                         <input type="radio" name="modality" id="presential">
                         <label for="presential">Presencial</label>
                     </ul>
                 </div>
+                <div>
+                    <p>Adicionar curso em:</p>
+                    <ul>
+                        <input type="radio" name="add_area" id="academicEducation" checked>
+                        <label for="academicEducation">Formações Acadêmicas</label>
+                        <br>
+                        <input type="radio" name="add_area" id="professionalSkills">
+                        <label for="professionalSkills">Habilidades Profissionais</label>
+                    </ul>
+                </div>
+                <button onclick="checkOptions()">Adicionar novo curso</button>
             </div>
         </fieldset>
-        <fieldset>
-            <legend>Cores do currículo</legend>
-            <label for="">Principal:</label>
-            <input type="color" name="" id="">
-        </fieldset>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="curriculum">
             <header class="header-cv">
                 <h1>
@@ -194,26 +177,10 @@
                     <section>
                         <h2 class="titles">FORMAÇÃO ACADÊMICA</h2>
                         <div class="bars"></div>
-                        <div class="area-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="add-icons" height="18px" viewBox="0 0 24 24"
-                                width="18px">
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path
-                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
-                            </svg>
-                        </div>
                     </section>
                     <section>
                         <h2 class="titles">HABILIDADES PROFISSIONAIS</h2>
                         <div class="bars"></div>
-                        <div class="area-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="add-icons" height="18px" viewBox="0 0 24 24"
-                                width="18px">
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path
-                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
-                            </svg>
-                        </div>
                     </section>
                 </article>
             </div>
