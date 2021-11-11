@@ -20,7 +20,7 @@
             <p>Selecione as opções correspondentes antes de adicionar cada curso.</p>
             <div class="fieldset-content">
                 <div>
-                    <p>Status:</p>
+                    <p><b>Status:</b></p>
                     <ul>
                         <input type="radio" name="stats" id="concluded" checked>
                         <label for="concluded">Concluído</label>
@@ -30,7 +30,7 @@
                     </ul>
                 </div>
                 <div>
-                    <p>Modalidade:</p>
+                    <p><b>Modalidade:</b></p>
                     <ul>
                         <input type="radio" name="modality" id="online" checked>
                         <label for="online">Online</label>
@@ -40,7 +40,7 @@
                     </ul>
                 </div>
                 <div>
-                    <p>Adicionar curso em:</p>
+                    <p><b>Adicionar curso em:</b></p>
                     <ul>
                         <input type="radio" name="add_area" id="academicEducation" checked>
                         <label for="academicEducation">Formações Acadêmicas</label>
@@ -49,14 +49,49 @@
                         <label for="professionalSkills">Habilidades Profissionais</label>
                     </ul>
                 </div>
-                <button onclick="checkOptions()">Adicionar novo curso</button>
+                <button class="add-course" onclick="checkOptions()">Adicionar novo curso</button>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><b>Paleta de cores</b></legend>
+            <p>Selecione as cores do seu currículo.</p>
+            <div class="fieldset-content">
+                <div>
+                    <ul>
+                        <label for="">Cor primária</label>
+                        <input type="color" id="primaryColor" value="#004aad"
+                            oninput="changeColors(this.id, this.value)">
+                        <br>
+                        <label for="">Cor terciária</label>
+                        <input type="color" id="tertiaryColor" value="#000000" style="margin-left: 1.5px;"
+                            oninput="changeColors(this.id, this.value)">
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <label for="">Cor secundária</label>
+                        <input type="color" id="secondaryColor" value="#164e98" style="margin-left: 2px;"
+                            oninput="changeColors(this.id, this.value)">
+                        <br>
+                        <label for="">Cor quaternária</label>
+                        <input type="color" id="quaternaryColor" value="#ffffff"
+                            oninput="changeColors(this.id, this.value)">
+                    </ul>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><b>Salvar currículo</b></legend>
+            <p>Salve o seu currículo em formatos de arquivo como em PDF.</p>
+            <div class="container-save-cv">
+                <button class="save-cv" onclick="print()">Salvar</button>
             </div>
         </fieldset>
         <div class="curriculum">
             <header class="header-cv">
                 <h1>
-                    <textarea class="edit-header" maxlength="29" spellcheck="false" title="Clique para digitar seu nome"
-                        autofocus onfocus="focusName(this)">Seu Nome</textarea>
+                    <textarea class="edit-header" id="userName" maxlength="29" spellcheck="false"
+                        title="Clique para digitar seu nome" autofocus onfocus="focusName(this)">Seu Nome</textarea>
                 </h1>
             </header>
             <div class="main-cv">
@@ -182,61 +217,6 @@
                         <h2 class="titles">HABILIDADES PROFISSIONAIS</h2>
                         <div class="bars"></div>
                         <div id="professionalSkillsArea"></div>
-
-
-
-
-                        <!-- <textarea rows="1" class="titles-2"
-                            oninput="formatTextarea(this)">Nome da Instituição</textarea>
-                        <textarea rows="1" class="titles-3" oninput="formatTextarea(this)">Nome do Curso</textarea> -->
-
-                        <!-- <ul>
-                            <li>
-                                <b>Ano de conclusão:</b>
-                                <textarea class="edit-lists" maxlength="4" placeholder="2020" spellcheck="false"
-                                    title="Digite o ano de conclusão do seu curso" style="width: 150px;"></textarea>
-                            </li>
-
-                            <li>
-                                <b>Link do Site:</b>
-                                <textarea class="edit-lists" maxlength="26" placeholder="www.site.com"
-                                    spellcheck="false" title="Digite o link do site de onde você fez seu curso"
-                                    style="width: 185px;"></textarea>
-                            </li>
-
-                            <li>
-                                <b>Carga horária:</b>
-                                <textarea class="edit-lists" maxlength="10" placeholder="40 horas" spellcheck="false"
-                                    title="Digite a carga horária do seu curso" style="width: 175px;"></textarea>
-                            </li>
-
-                            <li>
-                                <b>Local:</b>
-                                <textarea class="edit-lists" maxlength="31" placeholder="Colégio Estadual Exemplo"
-                                    spellcheck="false" title="Digite o local onde você fez o seu curso"
-                                    style="width: 278px;"></textarea>
-                            </li>
-
-                            <li>
-                                <b>Conclusão prevista:</b>
-                                <textarea class="edit-lists" maxlength="4" placeholder="2024" spellcheck="false"
-                                    title="Digite em que ano o seu curso irá ser finalizado"
-                                    style="width: 140px;"></textarea>
-                            </li>
-
-                            <li>
-                                <b>Turno:</b>
-                                <textarea class="edit-lists" maxlength="5" placeholder="Manhã" spellcheck="false"
-                                    title="Digite o turno do seu curso" style="width: 276px;"></textarea>
-                            </li>
-                        </ul> -->
-
-
-
-
-
-
-
                     </section>
                 </article>
             </div>
