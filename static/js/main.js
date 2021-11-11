@@ -32,6 +32,9 @@
 //     }
 // }
 
+// Carrega a página com o cursor no nome presente no currículo.
+const focusName = (name) => name.selectionStart = name.selectionEnd = name.value.length;
+
 // Permite a quebra de linha em alguns elementos textarea.
 function formatTextarea(textarea) {
     if (textarea.scrollHeight > textarea.offsetHeight) {
@@ -50,8 +53,31 @@ for (let i = 0; i <= elements.length; i++) {
     });
 }
 
-function checkOptions() {
+// const infoSkillsArea = {
+//     conclusionYear: "";
+//     websiteLink: "";
+//     workload: "";
+//     local: "";
+//     predictedCompletion: "";
+//     shift: "";
+// }
 
+function checkOptions() {
+    if (concluded.checked && online.checked) {
+        
+    }
+
+    if (concluded.checked && presential.checked) {
+        alert("B")
+    }
+
+    if (inProgress.checked && online.checked) {
+        alert("C")
+    }
+
+    if (inProgress.checked && presential.checked) {
+        alert("D")
+    }
 }
 
 function createSkillsArea() {
