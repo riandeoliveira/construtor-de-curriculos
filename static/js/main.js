@@ -1,24 +1,3 @@
-// Carrega a página com o cursor no nome presente no currículo.
-const focusName = (name) => name.selectionStart = name.selectionEnd = name.value.length;
-
-// Permite a quebra de linha em alguns elementos textarea.
-function formatTextarea(textarea) {
-    if (textarea.scrollHeight > textarea.offsetHeight) {
-        textarea.rows += 1;
-    }
-}
-
-const elements = document.getElementsByClassName("edit-lists");
-
-// Impede a quebra de linha em alguns elementos textarea.
-for (let i = 0; i < elements.length; i++) {
-    elements[i].addEventListener("keypress", keyEvent => {
-        if (keyEvent.which === 13) {
-            keyEvent.preventDefault();
-        }
-    });
-}
-
 // Armazena os códigos HTML correspondentes de cada opção selecionada para criá-los quando necessário.
 const infoSkillsArea = {
     institutionName: `<textarea rows="1" class="titles-2" spellcheck="false" oninput="formatTextarea(this)">Nome da Instituição</textarea>`,
@@ -90,4 +69,41 @@ function createSkillsArea(skillA, skillB, skillC, skillArea) {
         ${skillB}
         ${skillC}
     </ul>`;
+}
+
+function changeColors(id, color) {
+    const rootCSS = document.querySelector(":root");
+
+    if (id === "primaryColor") rootCSS.style.setProperty("--color-primary", color);
+    if (id === "quaternaryColor") rootCSS.style.setProperty("--color-quaternary", color);
+    if (id === "secondaryColor") rootCSS.style.setProperty("--color-secondary", color);
+    if (id === "tertiaryColor") rootCSS.style.setProperty("--color-tertiary", color);
+}
+
+// Carrega a página com o cursor no nome presente no currículo.
+const focusName = (name) => name.selectionStart = name.selectionEnd = name.value.length;
+
+// Impede o uso da tecla enter no nome.
+userName.addEventListener("keypress", keyEvent => {
+    if (keyEvent.which === 13) {
+        keyEvent.preventDefault();
+    }
+});
+
+// Permite a quebra de linha em alguns elementos textarea.
+function formatTextarea(textarea) {
+    if (textarea.scrollHeight > textarea.offsetHeight) {
+        textarea.rows += 1;
+    }
+}
+
+const elements = document.getElementsByClassName("edit-lists");
+
+// Impede a quebra de linha em alguns elementos textarea.
+for (let i = 0; i < elements.length; i++) {
+    elements[i].addEventListener("keypress", keyEvent => {
+        if (keyEvent.which === 13) {
+            keyEvent.preventDefault();
+        }
+    });
 }
