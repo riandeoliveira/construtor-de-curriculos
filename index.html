@@ -55,8 +55,8 @@
         <div class="curriculum">
             <header class="header-cv">
                 <h1>
-                    <textarea class="edit-header" maxlength="29" spellcheck="false"
-                        title="Clique para digitar seu nome">Seu Nome</textarea>
+                    <textarea class="edit-header" maxlength="29" spellcheck="false" title="Clique para digitar seu nome"
+                        autofocus onfocus="focusName(this)">Seu Nome</textarea>
                 </h1>
             </header>
             <div class="main-cv">
@@ -181,6 +181,52 @@
                     <section>
                         <h2 class="titles">HABILIDADES PROFISSIONAIS</h2>
                         <div class="bars"></div>
+
+
+
+
+                        <textarea rows="1" class="titles-2"
+                            oninput="formatTextarea(this)">Nome da Instituição</textarea>
+                        <textarea rows="1" class="titles-3" oninput="formatTextarea(this)">Nome do Curso</textarea>
+                        <ul>
+                            <li>
+                                <b>Ano de conclusão:</b>
+                                <textarea class="edit-lists" placeholder="2020" spellcheck="false"></textarea>
+                            </li>
+
+                            <li>
+                                <b>Link do Site:</b>
+                                <textarea class="edit-lists" placeholder="www.site.com" spellcheck="false"></textarea>
+                            </li>
+
+                            <li>
+                                <b>Carga horária:</b>
+                                <textarea class="edit-lists" placeholder="40 horas" spellcheck="false"></textarea>
+                            </li>
+
+                            <li>
+                                <b>Local:</b>
+                                <textarea class="edit-lists" placeholder="Colégio Estadual Exemplo"
+                                    spellcheck="false"></textarea>
+                            </li>
+
+                            <li>
+                                <b>Conclusão prevista:</b>
+                                <textarea class="edit-lists" placeholder="2024" spellcheck="false"></textarea>
+                            </li>
+
+                            <li>
+                                <b>Turno:</b>
+                                <textarea class="edit-lists" placeholder="Manhã" spellcheck="false"></textarea>
+                            </li>
+                        </ul>
+
+
+
+
+
+
+
                     </section>
                 </article>
             </div>
