@@ -71,13 +71,28 @@ function createSkillsArea(skillA, skillB, skillC, skillArea) {
     </ul>`;
 }
 
-function changeColors(id, color) {
-    const rootCSS = document.querySelector(":root");
+const rootCSS = document.querySelector(":root");
 
-    if (id === "primaryColor") rootCSS.style.setProperty("--color-primary", color);
-    if (id === "quaternaryColor") rootCSS.style.setProperty("--color-quaternary", color);
-    if (id === "secondaryColor") rootCSS.style.setProperty("--color-secondary", color);
-    if (id === "tertiaryColor") rootCSS.style.setProperty("--color-tertiary", color);
+const colorsRoot = ["--color-primary", "--color-quaternary", "--color-secondary", "--color-tertiary"];
+const colorsStringId = ["primaryColor", "quaternaryColor", "secondaryColor", "tertiaryColor"];
+const colorsId = [primaryColor, quaternaryColor, secondaryColor, tertiaryColor];
+
+// Muda a paleta de cores do currículo.
+function changeColors(id, color) {
+    for (let i = 0; i < colorsStringId.length; i++) {
+        if (id === colorsStringId[i]) rootCSS.style.setProperty(colorsRoot[i], color);
+    }
+}
+
+// Gera uma paleta de cores aleatória para o currículo.
+function generatesRandomColor() {
+    for (let i = 0; i < colorsRoot.length; i++) {
+        const random = Math.floor(Math.random() * 16777215).toString(16);
+        const randomColor = "#" + random;
+
+        rootCSS.style.setProperty(colorsRoot[i], randomColor);
+        colorsId[i].value = randomColor;
+    }
 }
 
 // Carrega a página com o cursor no nome presente no currículo.
