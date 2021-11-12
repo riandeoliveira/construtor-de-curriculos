@@ -88,11 +88,11 @@ input[type="color"] {
     width: 25px;
 }
 
-.container-save-cv {
+.container-random-colors, .container-save-cv {
     text-align: center;
 }
 
-.save-cv {
+.random-colors, .save-cv {
     cursor: pointer;
     margin: 10px;
     padding: 5px 100px;
@@ -221,6 +221,10 @@ li {
 
 
 @media print {
+    body {
+        background-color: var(--color-quaternary);
+    }
+
     main {
         display: block;
     }
