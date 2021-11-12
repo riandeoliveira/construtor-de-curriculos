@@ -58,27 +58,58 @@
             <div class="fieldset-content">
                 <div>
                     <ul>
-                        <label for="">Cor primária</label>
+                        <label for="primaryColor">Cor primária</label>
                         <input type="color" id="primaryColor" value="#004aad"
                             oninput="changeColors(this.id, this.value)">
                         <br>
-                        <label for="">Cor terciária</label>
+                        <label for="tertiaryColor">Cor terciária</label>
                         <input type="color" id="tertiaryColor" value="#000000" style="margin-left: 1.5px;"
                             oninput="changeColors(this.id, this.value)">
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <label for="">Cor secundária</label>
+                        <label for="secondaryColor">Cor secundária</label>
                         <input type="color" id="secondaryColor" value="#164e98" style="margin-left: 2px;"
                             oninput="changeColors(this.id, this.value)">
                         <br>
-                        <label for="">Cor quaternária</label>
+                        <label for="quaternaryColor">Cor quaternária</label>
                         <input type="color" id="quaternaryColor" value="#ffffff"
                             oninput="changeColors(this.id, this.value)">
                     </ul>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+            <p>Sorteie uma paleta de cores aleatórias.</p>
+            <div class="container-random-colors">
+                <button class="random-colors" onclick="generatesRandomColor()">Gerar paleta de cores</button>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </fieldset>
         <fieldset>
             <legend><b>Salvar currículo</b></legend>
