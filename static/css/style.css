@@ -236,6 +236,7 @@ li {
 footer {
     background-color: #1F0DFA;
     height: 25px;
+    margin-top: 10px;
     padding: 4px;
     text-align: center;
 }
