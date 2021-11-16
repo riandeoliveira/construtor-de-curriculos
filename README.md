@@ -1,4 +1,4 @@
-<h1 align="center">Construtor de Currículos</h1>
+<h1 align="center">CV Editor</h1>
 
 ## Sobre o Projeto
 
