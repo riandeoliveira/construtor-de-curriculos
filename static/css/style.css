@@ -278,8 +278,15 @@ footer {
     }
 }
 
-@media all and (min-width: 1600px) {
+@media all and (max-width: 1300px) {
+    main {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 700px) {
     body {
-        /* background-color: blue; */
+        
     }
 }
