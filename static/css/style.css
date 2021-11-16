@@ -263,7 +263,8 @@ footer {
     }
 
     .header-page,
-    fieldset {
+    fieldset,
+    footer {
         display: none;
     }
 
