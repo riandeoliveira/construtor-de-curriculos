@@ -11,88 +11,103 @@
 
 <body>
     <header class="header-page">
-        <h1>CV Editor</h1>
-        <p class="sub-title-page">Rápido, simples e fácil</p>
+        <h1 class="title-page">CV Editor</h1>
+        <p class="sub-title-page">Editor de currículos para desenvolvedores. Simples, rápido e fácil</p>
     </header>
     <main>
-        <fieldset>
-            <legend><b>Informações sobre os cursos</b></legend>
-            <p>Selecione as opções correspondentes antes de adicionar cada curso.</p>
-            <div class="fieldset-content">
-                <div>
-                    <p><b>Status:</b></p>
-                    <ul>
-                        <input type="radio" name="stats" id="concluded" checked>
-                        <label for="concluded">Concluído</label>
-                        <br>
-                        <input type="radio" name="stats" id="inProgress">
-                        <label for="inProgress">Em andamento</label>
-                    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="forms">
+            <fieldset>
+                <legend><b>Informações sobre os cursos</b></legend>
+                <p>Selecione as opções correspondentes antes de adicionar cada curso.</p>
+                <div class="fieldset-content">
+                    <div>
+                        <p><b>Status:</b></p>
+                        <ul>
+                            <input type="radio" name="stats" id="concluded" checked>
+                            <label for="concluded">Concluído</label>
+                            <br>
+                            <input type="radio" name="stats" id="inProgress">
+                            <label for="inProgress">Em andamento</label>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><b>Modalidade:</b></p>
+                        <ul>
+                            <input type="radio" name="modality" id="online" checked>
+                            <label for="online">Online</label>
+                            <br>
+                            <input type="radio" name="modality" id="presential">
+                            <label for="presential">Presencial</label>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><b>Adicionar curso em:</b></p>
+                        <ul>
+                            <input type="radio" name="add_area" id="academicEducation" checked>
+                            <label for="academicEducation">Formações Acadêmicas</label>
+                            <br>
+                            <input type="radio" name="add_area" id="professionalSkills">
+                            <label for="professionalSkills">Habilidades Profissionais</label>
+                        </ul>
+                    </div>
+                    <button class="add-course" onclick="checkOptions()">Adicionar novo curso</button>
                 </div>
-                <div>
-                    <p><b>Modalidade:</b></p>
-                    <ul>
-                        <input type="radio" name="modality" id="online" checked>
-                        <label for="online">Online</label>
-                        <br>
-                        <input type="radio" name="modality" id="presential">
-                        <label for="presential">Presencial</label>
-                    </ul>
+            </fieldset>
+            <fieldset>
+                <legend><b>Paleta de cores</b></legend>
+                <p>Selecione as cores do seu currículo.</p>
+                <div class="fieldset-content">
+                    <div>
+                        <ul>
+                            <label for="primaryColor">Cor primária</label>
+                            <input type="color" id="primaryColor" value="#004aad"
+                                oninput="changeColors(this.id, this.value)">
+                            <br>
+                            <label for="tertiaryColor">Cor terciária</label>
+                            <input type="color" id="tertiaryColor" value="#000000" style="margin-left: 1.5px;"
+                                oninput="changeColors(this.id, this.value)">
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <label for="secondaryColor">Cor secundária</label>
+                            <input type="color" id="secondaryColor" value="#164e98" style="margin-left: 2px;"
+                                oninput="changeColors(this.id, this.value)">
+                            <br>
+                            <label for="quaternaryColor">Cor quaternária</label>
+                            <input type="color" id="quaternaryColor" value="#ffffff"
+                                oninput="changeColors(this.id, this.value)">
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <p><b>Adicionar curso em:</b></p>
-                    <ul>
-                        <input type="radio" name="add_area" id="academicEducation" checked>
-                        <label for="academicEducation">Formações Acadêmicas</label>
-                        <br>
-                        <input type="radio" name="add_area" id="professionalSkills">
-                        <label for="professionalSkills">Habilidades Profissionais</label>
-                    </ul>
+                <p>Sorteie uma paleta de cores aleatórias.</p>
+                <div class="container-random-colors">
+                    <button class="random-colors" onclick="generatesRandomColor()">Gerar paleta de cores</button>
                 </div>
-                <button class="add-course" onclick="checkOptions()">Adicionar novo curso</button>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend><b>Paleta de cores</b></legend>
-            <p>Selecione as cores do seu currículo.</p>
-            <div class="fieldset-content">
-                <div>
-                    <ul>
-                        <label for="primaryColor">Cor primária</label>
-                        <input type="color" id="primaryColor" value="#004aad"
-                            oninput="changeColors(this.id, this.value)">
-                        <br>
-                        <label for="tertiaryColor">Cor terciária</label>
-                        <input type="color" id="tertiaryColor" value="#000000" style="margin-left: 1.5px;"
-                            oninput="changeColors(this.id, this.value)">
-                    </ul>
+            </fieldset>
+            <fieldset>
+                <legend><b>Salvar currículo</b></legend>
+                <p>Salve o seu currículo em formatos de arquivo como em PDF.</p>
+                <div class="container-save-cv">
+                    <button class="save-cv" onclick="print()">Salvar</button>
                 </div>
-                <div>
-                    <ul>
-                        <label for="secondaryColor">Cor secundária</label>
-                        <input type="color" id="secondaryColor" value="#164e98" style="margin-left: 2px;"
-                            oninput="changeColors(this.id, this.value)">
-                        <br>
-                        <label for="quaternaryColor">Cor quaternária</label>
-                        <input type="color" id="quaternaryColor" value="#ffffff"
-                            oninput="changeColors(this.id, this.value)">
-                    </ul>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-            <p>Sorteie uma paleta de cores aleatórias.</p>
-            <div class="container-random-colors">
-                <button class="random-colors" onclick="generatesRandomColor()">Gerar paleta de cores</button>
-            </div>
+            </fieldset>
+        </div>
 
 
 
@@ -106,18 +121,6 @@
 
 
 
-
-
-
-
-        </fieldset>
-        <fieldset>
-            <legend><b>Salvar currículo</b></legend>
-            <p>Salve o seu currículo em formatos de arquivo como em PDF.</p>
-            <div class="container-save-cv">
-                <button class="save-cv" onclick="print()">Salvar</button>
-            </div>
-        </fieldset>
         <div class="curriculum">
             <header class="header-cv">
                 <h1>
@@ -253,6 +256,14 @@
             </div>
         </div>
     </main>
+    <footer>
+        <p class="footer-paragraph">
+            <span>Desenvolvido por</span>
+            <a href="https://github.com/riandeoliveira" rel="external" target="_blank">
+                <strong>Rian Oliveira</strong>
+            </a>
+        </p>
+    </footer>
     <script src="static/js/main.js"></script>
 </body>
 
