@@ -60,12 +60,13 @@ main {
 }
 
 .forms {
-    max-width: 542px;
+    margin: 0 0 0 15px;
+    padding: 0 0 0 5px;
 }
 
 .forms fieldset {
     margin: 10px auto;
-    width: 100%;
+    max-width: 645px;
 }
 
 fieldset {
@@ -75,7 +76,6 @@ fieldset {
     font-family: var(--font-roboto);
     margin: 10px;
     padding: 10px;
-    width: 400px;
 }
 
 .fieldset-content {
@@ -93,25 +93,23 @@ input[type="radio"], label {
     cursor: pointer;
 }
 
-.add-course {
+.paragraph-button {
+    margin: 0 0 20px 0;
+}
+
+.container-button {
+    text-align: center;
+}
+
+button {
     cursor: pointer;
     padding: 5px;
-    width: 500px;
+    width: 80%;
 }
 
 input[type="color"] {
     cursor: pointer;
     width: 25px;
-}
-
-.container-random-colors, .container-save-cv {
-    text-align: center;
-}
-
-.random-colors, .save-cv {
-    cursor: pointer;
-    margin: 10px;
-    padding: 5px 100px;
 }
 
 .curriculum {
@@ -278,13 +276,30 @@ footer {
     }
 }
 
-@media all and (max-width: 1300px) {
+@media all and (max-width: 1280px) {
     main {
         align-items: center;
         flex-direction: column;
     }
+
+    .forms {
+        margin: 0 15px;
+        padding: 0 5px;
+    }
+
+    .curriculum {
+        /* display: none; */
+    }
 }
 
 @media all and (max-width: 700px) {
-    
+    /* Diminui currículo */
+}
+
+@media all and (max-width: 580px) {
+    /* Quebra forms */
+
+    .fieldset-content {
+        flex-direction: column;
+    }
 }
