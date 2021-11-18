@@ -15,6 +15,9 @@
         <p class="sub-title-page">Editor de currículos para desenvolvedores. Simples, rápido e fácil</p>
     </header>
     <main>
+
+        <!-- Área de formulários. -->
+
         <div class="forms">
             <fieldset>
                 <legend><b>Informações sobre os cursos</b></legend>
@@ -62,22 +65,15 @@
                     <div>
                         <ul>
                             <label for="primaryColor">Cor primária</label>
-                            <input type="color" id="primaryColor" value="#004aad"
+                            <input type="color" id="primaryColor" value="#004aad" style="margin-left: 29.5px;"
+                                oninput="changeColors(this.id, this.value)">
+                            <br>
+                            <label for="secondaryColor">Cor secundária</label>
+                            <input type="color" id="secondaryColor" value="#164e98" style="margin-left: 10px;"
                                 oninput="changeColors(this.id, this.value)">
                             <br>
                             <label for="tertiaryColor">Cor terciária</label>
-                            <input type="color" id="tertiaryColor" value="#000000" style="margin-left: 1.5px;"
-                                oninput="changeColors(this.id, this.value)">
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <label for="secondaryColor">Cor secundária</label>
-                            <input type="color" id="secondaryColor" value="#164e98" style="margin-left: 2px;"
-                                oninput="changeColors(this.id, this.value)">
-                            <br>
-                            <label for="quaternaryColor">Cor quaternária</label>
-                            <input type="color" id="quaternaryColor" value="#ffffff"
+                            <input type="color" id="tertiaryColor" value="#000000" style="margin-left: 30.5px;"
                                 oninput="changeColors(this.id, this.value)">
                         </ul>
                     </div>
@@ -95,11 +91,13 @@
                 </div>
             </fieldset>
         </div>
+
+        <!-- Área do currículo. -->
+
         <div class="curriculum">
             <header class="header-cv">
                 <h1>
-                    <textarea class="edit-header" id="userName" maxlength="29" spellcheck="false"
-                        title="Clique para digitar seu nome" autofocus onfocus="focusName(this)">Seu Nome</textarea>
+                    <textarea class="edit-header" id="userName" spellcheck="false">Seu Nome</textarea>
                 </h1>
             </header>
             <div class="main-cv">
@@ -108,8 +106,7 @@
                         <h2 class="titles">SOBRE MIM</h2>
                         <span>
                             <textarea rows="1" class="edit-paragraphs" placeholder="Fale um pouco sobre você"
-                                spellcheck="false" title="Clique aqui para falar sobre você"
-                                oninput="formatTextarea(this)"></textarea>
+                                spellcheck="false" oninput="formatTextarea(this)"></textarea>
                         </span>
                     </section>
                     <section>
@@ -118,33 +115,30 @@
                             <li>
                                 <b>Data de Nascimento:</b>
                                 <textarea class="edit-lists" maxlength="10" placeholder="dd/mm/aaaa" spellcheck="false"
-                                    title="Clique para digitar sua data de nascimento" style="width: 130px;"></textarea>
+                                    style="width: 130px;"></textarea>
                             </li>
                             <li>
                                 <b>Idade:</b>
-                                <textarea class="edit-lists" maxlength="7" placeholder="xx anos" spellcheck="false"
-                                    title="Clique para digitar sua idade" style="width: 265px;"></textarea>
+                                <textarea class="edit-lists" maxlength="7" placeholder="xx anos"
+                                    spellcheck="false"></textarea>
                             </li>
                             <li>
                                 <b>Nacionalidade:</b>
-                                <textarea class="edit-lists" maxlength="20" placeholder="Exemplo" spellcheck="false"
-                                    title="Clique para digitar sua nacionalidade" style="width: 214px;"></textarea>
+                                <textarea class="edit-lists" placeholder="Exemplo" spellcheck="false"></textarea>
                             </li>
                             <li>
                                 <b>Endereço:</b>
-                                <textarea class="edit-lists" maxlength="28" placeholder="Rua Exemplo, 123"
-                                    spellcheck="false" title="Clique para digitar seu endereço"
-                                    style="width: 243px;"></textarea>
+                                <textarea class="edit-lists" placeholder="Rua Exemplo, 123"
+                                    spellcheck="false"></textarea>
                             </li>
                             <li>
                                 <b>CEP:</b>
-                                <textarea class="edit-lists" maxlength="9" placeholder="12345-678" spellcheck="false"
-                                    title="Clique para digitar seu CEP" style="width: 373px;"></textarea>
+                                <textarea class="edit-lists" maxlength="9" placeholder="12345-678"
+                                    spellcheck="false"></textarea>
                             </li>
                             <li>
                                 <b>Cidade:</b>
-                                <textarea class="edit-lists" maxlength="30" placeholder="Exemplo, EX" spellcheck="false"
-                                    title="Clique para digitar sua cidade" style="width: 257px;"></textarea>
+                                <textarea class="edit-lists" placeholder="Exemplo, EX" spellcheck="false"></textarea>
                             </li>
                         </ul>
                     </section>
@@ -153,39 +147,31 @@
                         <ul>
                             <li>
                                 <b>Email:</b>
-                                <textarea class="edit-lists" maxlength="32" placeholder="exemplo2000@email.com"
-                                    spellcheck="false" title="Clique para digitar seu email"
-                                    style="width: 265px;"></textarea>
+                                <textarea class="edit-lists" placeholder="exemplo2000@email.com"
+                                    spellcheck="false"></textarea>
                             </li>
                             <li>
                                 <b>Telefone:</b>
                                 <textarea class="edit-lists" maxlength="15" placeholder="(00) 12345-6789"
-                                    spellcheck="false" title="Clique para digitar seu número de telefone"
-                                    style="width: 247px;"></textarea>
+                                    spellcheck="false"></textarea>
                             </li>
                             <li>
                                 <b>GitHub:</b>
-                                <textarea class="edit-lists" maxlength="28" placeholder="github.com/usuario"
-                                    spellcheck="false" title="Clique para digitar o link da sua conta do GitHub"
-                                    style="width: 257px;"></textarea>
+                                <textarea class="edit-lists" placeholder="github.com/usuario"
+                                    spellcheck="false"></textarea>
                             </li>
                             <li>
                                 <b>Certificados:</b>
-                                <textarea class="edit-lists" maxlength="24" spellcheck="false"
-                                    title="Clique para digitar o link dos seus certificados"
-                                    style="width: 227px"></textarea>
+                                <textarea class="edit-lists" spellcheck="false"></textarea>
                             </li>
                             <li>
                                 <b>Portfólio:</b>
-                                <textarea class="edit-lists" maxlength="26" spellcheck="false"
-                                    title="Clique para digitar o link do seu portfólio"
-                                    style="width: 247px;"></textarea>
+                                <textarea class="edit-lists" spellcheck="false"></textarea>
                             </li>
                             <li>
                                 <b>LinkedIn:</b>
-                                <textarea class="edit-lists" maxlength="27" placeholder="linkedin.com/in/usuario/"
-                                    spellcheck="false" title="Clique para digitar o link do seu LinkedIn"
-                                    style="width: 249px;"></textarea>
+                                <textarea class="edit-lists" placeholder="linkedin.com/in/usuario/"
+                                    spellcheck="false"></textarea>
                             </li>
                         </ul>
                     </section>
@@ -194,7 +180,6 @@
                         <span>
                             <textarea rows="1" class="edit-paragraphs"
                                 placeholder="Fale um pouco sobre os seus objetivos" spellcheck="false"
-                                title="Clique aqui para falar sobre os seus objetivos"
                                 oninput="formatTextarea(this)"></textarea>
                         </span>
                     </section>
@@ -202,16 +187,14 @@
                         <h2 class="titles">IDIOMAS</h2>
                         <span>
                             <textarea rows="1" class="edit-skills-lists" placeholder="Ex: Inglês Intermediário"
-                                spellcheck="false" title="Clique aqui para adicionar seus idiomas"
-                                oninput="formatTextarea(this)"></textarea>
+                                spellcheck="false" oninput="formatTextarea(this)"></textarea>
                         </span>
                     </section>
                     <section>
                         <h2 class="titles">COMPETÊNCIAS</h2>
                         <span>
                             <textarea rows="1" class="edit-skills-lists" placeholder="Ex: Determinado"
-                                spellcheck="false" title="Clique aqui para adicionar suas competências"
-                                oninput="formatTextarea(this)"></textarea>
+                                spellcheck="false" oninput="formatTextarea(this)"></textarea>
                         </span>
                     </section>
                 </article>
