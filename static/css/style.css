@@ -181,6 +181,7 @@ ul {
 
 li {
     display: flex;
+    width: 100%;
 }
 
 .edit-lists {
@@ -188,6 +189,7 @@ li {
     font-size: 13px;
     height: 16px;
     margin-left: 5px;
+    width: 100%;
 }
 
 .edit-skills-lists {
@@ -285,10 +287,6 @@ footer {
     .forms {
         margin: 0 15px;
         padding: 0 5px;
-    }
-
-    .curriculum {
-        /* display: none; */
     }
 }
 
