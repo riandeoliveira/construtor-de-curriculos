@@ -1,4 +1,3 @@
-// Armazena os códigos HTML correspondentes de cada opção selecionada para criá-los quando necessário.
 const infoSkillsArea = {
     institutionName: `<textarea rows="1" class="titles-2" spellcheck="false" oninput="formatTextarea(this)">Nome da Instituição</textarea>`,
 
@@ -39,7 +38,6 @@ const infoSkillsArea = {
 </li>`
 }
 
-// Verifica as opções selecionadas e chama uma função para montar o HTML.
 function checkOptions() {
     let skillsArea;
 
@@ -55,7 +53,6 @@ function checkOptions() {
     if (inProgress.checked && presential.checked) createSkillsArea(infoSkillsArea.local, infoSkillsArea.shift, infoSkillsArea.predictedCompletion, skillsArea);
 }
 
-// Monta o HTML de acordo com os parâmetros passados.
 function createSkillsArea(skillA, skillB, skillC, skillArea) {
     skillArea.innerHTML +=
         `<div>
@@ -77,14 +74,12 @@ const colorsRoot = ["--color-primary", "--color-secondary", "--color-tertiary"];
 const colorsStringId = ["primaryColor", "secondaryColor", "tertiaryColor"];
 const colorsId = [primaryColor, secondaryColor, tertiaryColor];
 
-// Muda a paleta de cores do currículo.
 function changeColors(id, color) {
     for (let i = 0; i < colorsStringId.length; i++) {
         if (id === colorsStringId[i]) rootCSS.style.setProperty(colorsRoot[i], color);
     }
 }
 
-// Gera uma paleta de cores aleatória para o currículo.
 function generatesRandomColor() {
     for (let i = 0; i < colorsRoot.length; i++) {
         const random = Math.floor(Math.random() * 16777215).toString(16);
@@ -95,14 +90,12 @@ function generatesRandomColor() {
     }
 }
 
-// Impede o uso da tecla enter no nome.
 userName.addEventListener("keypress", keyEvent => {
     if (keyEvent.which === 13) {
         keyEvent.preventDefault();
     }
 });
 
-// Permite a quebra de linha em alguns elementos textarea.
 function formatTextarea(textarea) {
     if (textarea.scrollHeight > textarea.offsetHeight) {
         textarea.rows += 1;
@@ -111,7 +104,6 @@ function formatTextarea(textarea) {
 
 const elements = document.getElementsByClassName("edit-lists");
 
-// Impede a quebra de linha em alguns elementos textarea.
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener("keypress", keyEvent => {
         if (keyEvent.which === 13) {
