@@ -73,9 +73,9 @@ function createSkillsArea(skillA, skillB, skillC, skillArea) {
 
 const rootCSS = document.querySelector(":root");
 
-const colorsRoot = ["--color-primary", "--color-quaternary", "--color-secondary", "--color-tertiary"];
-const colorsStringId = ["primaryColor", "quaternaryColor", "secondaryColor", "tertiaryColor"];
-const colorsId = [primaryColor, quaternaryColor, secondaryColor, tertiaryColor];
+const colorsRoot = ["--color-primary", "--color-secondary", "--color-tertiary"];
+const colorsStringId = ["primaryColor", "secondaryColor", "tertiaryColor"];
+const colorsId = [primaryColor, secondaryColor, tertiaryColor];
 
 // Muda a paleta de cores do currículo.
 function changeColors(id, color) {
@@ -94,9 +94,6 @@ function generatesRandomColor() {
         colorsId[i].value = randomColor;
     }
 }
-
-// Carrega a página com o cursor no nome presente no currículo.
-const focusName = (name) => name.selectionStart = name.selectionEnd = name.value.length;
 
 // Impede o uso da tecla enter no nome.
 userName.addEventListener("keypress", keyEvent => {
@@ -122,3 +119,10 @@ for (let i = 0; i < elements.length; i++) {
         }
     });
 }
+
+
+
+
+
+
+
