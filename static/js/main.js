@@ -9,20 +9,15 @@ const infoSkillsArea = {
     shift: `<li contenteditable="true" spellcheck="false"><b>Turno: </b>Manhã</li>`,
 }
 
+function addAtributtes(id) {
+    for (let element of id.children) {
+        element.setAttribute("contenteditable", "true");
+        element.setAttribute("spellcheck", "false");
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+addAtributtes(personalData);
+addAtributtes(contacts);
 
 function checkOptions() {
     let skillsArea;
@@ -53,27 +48,6 @@ function createSkillsArea(skillA, skillB, skillC, skillArea) {
         ${skillC}
     </ul>`;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const rootCSS = document.querySelector(":root");
 
