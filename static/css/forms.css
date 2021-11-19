@@ -24,8 +24,12 @@ fieldset {
     padding: 10px;
 }
 
-.fieldset-content ul {
-    margin-right: 20px;
+.forms ul {
+    margin-right: 15px;
+}
+
+.fieldset ul {
+    margin: 15px 0;
 }
 
 input[type="radio"], label {
