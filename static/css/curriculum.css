@@ -1,0 +1,122 @@
+/* MEXER AQUI */
+
+.curriculum {
+    height: 895.31px;
+    margin: 15px;
+    padding: 5px;
+    width: 655px;
+}
+
+.header-cv {
+    background-color: var(--color-primary);
+    height: 95px;
+}
+
+textarea {
+    background-color: transparent;
+    border: 0;
+    resize: none;
+    outline: 0;
+}
+
+.edit-header {
+    color: var(--color-quaternary);
+    font-family: var(--font-open-sans), sans-serif;
+    font-size: 1em;
+    padding: 25.8px;
+    text-align: center;
+    width: 645px;
+}
+
+.main-cv {
+    background-color: var(--color-quaternary);
+    display: flex;
+    height: 800px;
+}
+
+.left-article {
+    padding: 15px 0px 15px 15px;
+    width: 327.5px;
+}
+
+.titles {
+    color: var(--color-secondary);
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.13em;
+    width: 310px;
+}
+
+.edit-paragraphs {
+    font-family: var(--font-roboto), sans-serif;
+    margin: 10px 0;
+    width: 90%;
+}
+
+span,
+li {
+    color: var(--color-tertiary);
+    font-family: var(--font-roboto), sans-serif;
+    font-size: 13px;
+    line-height: 1.25em;
+    list-style-type: none;
+    width: 265px;
+}
+
+ul {
+    margin: 15px 0;
+}
+
+li {
+    /* display: flex; */
+    width: 80%;
+}
+
+.edit-lists {
+    font-family: var(--font-roboto), sans-serif;
+    font-size: 13px;
+    height: 16px;
+    margin-left: 5px;
+    width: 100%;
+}
+
+.edit-skills-lists {
+    font-family: var(--font-roboto), sans-serif;
+    margin: 10px 0;
+    width: 90%;
+}
+
+.right-article {
+    padding: 15px 15px 15px 0px;
+    width: 327.5px;
+}
+
+.right-article ul {
+    margin: 5px 0 0 0;
+}
+
+.bars {
+    background-color: var(--color-primary);
+    height: 2px;
+    margin: 10px 0px 10px;
+    width: 320px;
+}
+
+.titles-2 {
+    color: var(--color-primary);
+    font-family: var(--font-pt-sans), sans-serif;
+    font-size: 18px;
+    width: 100%;
+}
+
+.titles-3 {
+    color: var(--color-tertiary);
+    font-family: var(--font-ruda), sans-serif;
+    font-size: 20px;
+    margin: 5px 0 0 0;
+    width: 310px;
+}
+
+#academicEducationArea ul, #professionalSkillsArea ul {
+    margin-bottom: 15px;
+}
