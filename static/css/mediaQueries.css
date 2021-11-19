@@ -40,8 +40,6 @@
 }
 
 @media all and (max-width: 580px) {
-    /* Quebra forms */
-
     .fieldset-content {
         flex-direction: column;
     }
