@@ -1,12 +1,15 @@
+const createSkillsDescription = (boldText, text) => `<li contenteditable="true" spellcheck="false"><b>${boldText}: </b><span>${text}</span></li>`;
+
 const infoSkillsArea = {
     institutionName: `<h3 contenteditable="true" spellcheck="false" class="titles-2">Nome da Instituição</h3>`,
     courseName: `<h4 contenteditable="true" spellcheck="false" class="titles-3">Nome do Curso</h4>`,
-    conclusionYear: `<li contenteditable="true" spellcheck="false"><b>Ano de conclusão: </b><span>2020</span></li>`,
-    websiteLink: `<li contenteditable="true" spellcheck="false"><b>Link do site: </b>www.site.com</li>`,
-    workload: `<li contenteditable="true" spellcheck="false"><b>Carga horária: </b>40 horas</li>`,
-    local: `<li contenteditable="true" spellcheck="false"><b>Local: </b>Colégio Estadual Exemplo</li>`,
-    predictedCompletion: `<li contenteditable="true" spellcheck="false"><b>Conclusão prevista: </b>2024</li>`,
-    shift: `<li contenteditable="true" spellcheck="false"><b>Turno: </b>Manhã</li>`,
+    
+    conclusionYear: createSkillsDescription("Ano de conclusão", "2020"),
+    websiteLink: createSkillsDescription("Link do site", "www.site.com"),
+    workload: createSkillsDescription("Carga horária", "40 horas"),
+    local: createSkillsDescription("Local", "Colégio Estadual Exemplo"),
+    predictedCompletion: createSkillsDescription("Conclusão prevista", "2024"),
+    shift: createSkillsDescription("Turno", "Manhã")
 }
 
 function addAtributtes(id) {
