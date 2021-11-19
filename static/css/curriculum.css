@@ -12,17 +12,10 @@
     height: 95px;
 }
 
-textarea {
-    background-color: transparent;
-    border: 0;
-    resize: none;
-    outline: 0;
-}
-
-.edit-header {
+.curriculum h1 {
     color: var(--color-quaternary);
     font-family: var(--font-open-sans), sans-serif;
-    font-size: 1em;
+    font-size: 2em;
     padding: 25.8px;
     text-align: center;
     width: 645px;
@@ -47,43 +40,31 @@ textarea {
     width: 310px;
 }
 
-.edit-paragraphs {
+.curriculum p {
     font-family: var(--font-roboto), sans-serif;
-    margin: 10px 0;
+    font-size: 13px;
+    margin: 15px 0;
     width: 90%;
 }
 
-span,
-li {
+.curriculum b {
     color: var(--color-tertiary);
+}
+
+.curriculum p:hover, span:hover {
+    cursor: text;
+}
+
+li {
     font-family: var(--font-roboto), sans-serif;
     font-size: 13px;
     line-height: 1.25em;
     list-style-type: none;
-    width: 265px;
+    width: 90%;
 }
 
 ul {
     margin: 15px 0;
-}
-
-li {
-    /* display: flex; */
-    width: 80%;
-}
-
-.edit-lists {
-    font-family: var(--font-roboto), sans-serif;
-    font-size: 13px;
-    height: 16px;
-    margin-left: 5px;
-    width: 100%;
-}
-
-.edit-skills-lists {
-    font-family: var(--font-roboto), sans-serif;
-    margin: 10px 0;
-    width: 90%;
 }
 
 .right-article {
