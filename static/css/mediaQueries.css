@@ -1,0 +1,48 @@
+@media only print {
+    body {
+        background-color: var(--color-quaternary);
+    }
+
+    main {
+        display: block;
+    }
+
+    .header-page,
+    fieldset,
+    footer {
+        display: none;
+    }
+
+    .curriculum {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-cv {
+        height: 830px;
+    }
+}
+
+@media all and (max-width: 1280px) {
+    main {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .forms {
+        margin: 0 15px;
+        padding: 0 5px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    /* Diminui currículo */
+}
+
+@media all and (max-width: 580px) {
+    /* Quebra forms */
+
+    .fieldset-content {
+        flex-direction: column;
+    }
+}
