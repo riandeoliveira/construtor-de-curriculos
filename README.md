@@ -2,7 +2,7 @@
 
 ## Sobre o Projeto
 
-Programa simples que cria um currículo baseado nas informações pessoais inseridas pelo usuário. Ainda pretendo mexer bastante neste projeto.
+Editor de currículos simples, que permite a adição de informações do usuário, troca de paleta de cores e a função de salvar o documento em PDF.
 
 ## Layout
 
