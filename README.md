@@ -2,7 +2,7 @@
 
 ## Sobre o Projeto
 
-Editor de currículos simples, que permite a adição de informações do usuário, troca de paleta de cores e a função de salvar o documento em PDF.
+Editor de currículos simples, que permite a adição de informações do usuário, troca de paleta de cores e a função de salvar o documento em PDF. No layout eu usei como base o meu próprio modelo de currículo.
 
 ## Layout
 
